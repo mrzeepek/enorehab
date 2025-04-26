@@ -1,0 +1,23 @@
+doctrine:
+    dbal:
+        url: '%env(resolve:DATABASE_URL)%'
+        charset: utf8mb4
+        logging: false
+        profiling: false
+
+        # IMPORTANT: Vous pouvez décommenter cette configuration pour MariaDB
+        # server_version: 'mariadb-10.11'
+        # driver: pdo_mysql
+
+    orm:
+        auto_generate_proxy_classes: true
+        enable_lazy_ghost_objects: true
+        report_fields_where_declared: true
+        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
+        auto_mapping: true
+        mappings:
+            App:
+                is_bundle: false
+                dir: '%kernel.project_dir%/src/Entity'
+                prefix: 'App\Entity'
+                alias: App

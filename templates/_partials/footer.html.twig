@@ -1,0 +1,36 @@
+<footer class="bg-[#111111] py-16 text-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-8 md:mb-0 text-center md:text-left">
+                <a href="{{ path('app_home') }}" class="text-white text-2xl font-bold">
+                    <span class="text-[#0ed0ff]">Eno</span>rehab
+                </a>
+                <p class="mt-2 text-gray-400">Accompagnement à distance pour sportifs</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+                <a href="mailto:enora.lenez@enorehab.fr" class="text-gray-400 hover:text-[#0ed0ff] transition-colors">
+                    enora.lenez@enorehab.fr
+                </a>
+                <div class="flex space-x-6">
+                    <a href="https://instagram.com/enorehab" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-gray-400 hover:text-[#0ed0ff] transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="border-gray-800 my-8">
+        
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-500 text-sm">&copy; {{ "now"|date('Y') }} Enorehab. Tous droits réservés.</p>
+            <div class="mt-4 md:mt-0">
+                <a href="{{ path('app_privacy') }}" class="text-gray-500 text-sm hover:text-[#0ed0ff] transition-colors mr-6">Mentions légales</a>
+                <a href="{{ path('app_privacy') }}" class="text-gray-500 text-sm hover:text-[#0ed0ff] transition-colors">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,21 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+    
+# Routes de rétrocompatibilité pour les anciennes URLs
+# Ces routes sont définies explicitement pour éviter de changer les URLs existantes
+process_form_legacy:
+    path: /process_form.php
+    controller: App\Controller\BilanController::processBilan
+    methods: [POST]
+
+process_ebook_legacy:
+    path: /process_ebook.php
+    controller: App\Controller\EbookController::processEbook
+    methods: [POST]
+
+send_ebook_legacy:
+    path: /send_ebook.php
+    controller: App\Controller\EbookController::ebookPage

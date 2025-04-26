@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>{% block title %}{{ pageTitle }}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{{ pageDescription }}{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}{{ pageKeywords }}{% endblock %}">
+    <meta name="author" content="Enorehab">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://enorehab.com/">
+    <meta property="og:title" content="{{ pageTitle }}">
+    <meta property="og:description" content="{{ pageDescription }}">
+    <meta property="og:image" content="https://enorehab.com/assets/img/og-image.jpg">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ pageTitle }}">
+    <meta name="twitter:description" content="{{ pageDescription }}">
+    <meta name="twitter:image" content="https://enorehab.com/assets/img/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('assets/img/logo-er.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('assets/img/logo-er.png') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('assets/img/logo-er.png') }}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS - JIT via Webpack Encore -->
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
+    
+    <!-- JavaScript inclusions -->
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+    
+    <!-- Analytics -->
+    {% include '_partials/analytics.html.twig' %}
+</head>
+<body class="bg-black text-white">
+    <!-- Header / Navigation -->
+    {% include '_partials/header.html.twig' %}
+    
+    <!-- Main Content -->
+    <main class="pt-16"> <!-- Padding-top pour compenser la hauteur du header fixe -->
+        {% block body %}{% endblock %}
+    </main>
+    
+    <!-- Footer -->
+    {% include '_partials/footer.html.twig' %}
+    
+    <!-- Cookie Consent -->
+    {% include '_partials/cookie_consent.html.twig' %}
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/form-validation.js') }}"></script>
+</body>
+</html>
