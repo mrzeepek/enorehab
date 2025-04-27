@@ -1,9 +1,14 @@
-/* Import Tailwind CSS */
+// assets/styles/app.scss
+// Importer Tailwind
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* Custom styles that override/extend Tailwind */
+// Importer les styles personnalisés
+@import '../css/custom.css';
+@import '../css/animations.css';
+
+// Styles de base
 body {
     font-family: 'Inter', sans-serif;
     background-color: #000000;
@@ -15,5 +20,3 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
 }
-
-/* Styles from custom.css will still be loaded separately via the link tag in base.html.twig */
