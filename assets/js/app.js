@@ -1,6 +1,6 @@
 // assets/js/app.js
 // Importer les styles
-import '../styles/app.scss';
+import '../styles/app.css';
 
 // Importer les scripts originaux
 import './main.js';

@@ -1,3 +1,21 @@
+/* assets/styles/app.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import des styles personnalisés */
+@import url('../css/custom.css');
+@import url('../css/animations.css');
+
+/* Styles de base */
 body {
-    background-color: lightgray;
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
 }
